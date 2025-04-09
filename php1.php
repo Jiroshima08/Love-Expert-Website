@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>How in love are you today? 😘💖</h1>
-    <form action="php1.php" method="POST">
+    <form action="index.php" method="POST">
         <label>Type in your mood (1-10): </label>
         <input type="text" name="moodLevel"><br><br>
         <label>Do you want a rizz tip? 😏 </label>
