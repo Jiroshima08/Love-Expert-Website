@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>LOVE EXPERT AMEN — Dianne Edition</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body { font-family: "Comic Sans MS", cursive, sans-serif; padding: 20px; background-color: #fff0f5; }
+        h1, h2, h3 { color: #ff69b4; }
+        .heart { font-size: 20px; }
+        select, input[type="submit"] { margin-top: 10px; padding: 5px; font-size: 16px; }
+        label { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>How much I wonder today? 😘💖</h1>
+    <form id="loveForm">
+        <label>Choose your current Dianne delulu level 😳💖: </label><br>
+        <select id="moodLevel" required>
+            <option value="" disabled selected>Choose wisely...</option>
+            <option value="1">1 - EMOTIONLESS. GTFO ME (unless Dianne texts me)</option>
+            <option value="2">2 - FOCUSING ON MYSELF... but she's in my thoughts ✨</option>
+            <option value="3">3 - FINNA PRETEND I don’t like Dianne 😩 (I’m lying)</option>
+            <option value="4">4 - ALR VIEWED HER STORY LIKE 10x and took a screenshot 🎬</option>
+            <option value="5">5 - Planning a future with Dianne in my dreams AWAIEAHEHAHSHAJDA 😳</option>
+            <option value="6">6 - CHILL GUY BUT I'M ALR DOING A RITUAL 🤫</option>
+            <option value="7">7 - She invited me sa ml once, I CODED A WEBSITE AND A POEM 💀</option>
+            <option value="8">8 - Already imagined MEETING MY PARENTS-IN-LAW 🤡</option>
+            <option value="9">9 - TAKEN? NO. DELULU? YES. WILL BE TAKEN? YES. But Dianne owns my heart 😭</option>
+            <option value="10">10 - Hopeless Romantic for Dianne. SEND HELP OR I DO THE RITUAL 😭</option>
+        </select><br><br>
+
+        <label>Do you want a Dianne tip or hehehe? 😏</label><br>
+        <input type="radio" name="extra" value="yes" checked> Yes, tell me how do I do the ritual properly 😩<br>
+        <input type="radio" name="extra" value="no"> No, I already fantasized 8 scenarios and a wedding venue. I'm confident<br>
+        <input type="radio" name="extra" value="tease"> The ultimate option for all the ultimate solutions for her 😭<br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="result" style="margin-top: 30px;"></div>
+
+    <script>
+        document.getElementById("loveForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const moodDropdown = document.getElementById("moodLevel");
+            const moodLevel = parseInt(moodDropdown.value);
+            const moodText = moodDropdown.options[moodDropdown.selectedIndex].text;
+            const extra = document.querySelector('input[name="extra"]:checked').value;
+
+            const result = document.getElementById("result");
+            result.innerHTML = "";
+
+            result.innerHTML += `<h2>Dianne Level: ${moodLevel} 💘</h2>`;
+            result.innerHTML += `<h3>💞 Dianne Mood Check: "${moodText}"</h3>`;
+
+            result.innerHTML += `<h3>📈 Simp Meter: ${moodLevel}/10 — Dianne Edition 💀</h3>`;
+            for (let x = 1; x <= moodLevel; x++) {
+                result.innerHTML += `Level ${x}: Thinking about Dianne... 💭<br><br>`;
+            }
+
+            if (moodLevel >= 9) {
+                result.innerHTML += "You're already imagining her in a wedding dress. A GRANDIOSE CHURCH WEDDING?! 😭";
+            } else if (moodLevel >= 6) {
+                result.innerHTML += "Boutta write a sonnet ‘Dianne & I’ 💀";
+            } else if (moodLevel >= 3) {
+                result.innerHTML += "Kunwari chill scary mysterious person, but smiled when she typed ‘HAHHAHSHAHHAHASHAHA’ 😏";
+            } else {
+                result.innerHTML += "Sure sure I close my eyes, not a simp, not simping, sure sure 😎";
+            }
+
+            result.innerHTML += "<h3>Hearts sent to Dianne 💖</h3>";
+            for (let i = 0; i < moodLevel; i++) {
+                result.innerHTML += "💖 ";
+            }
+
+            result.innerHTML += "<br><h3>Gyro's Fatherly Love Advice 🫶</h3>";
+            const actions = [
+                "If you keep thinking of her, maybe it’s time to tell her.(Or gayumahin na natin 😳)",
+                "Love isn't about perfection. Just be miserable, Dianne loves it.",
+                "Don’t lose yourself while loving her. Let her love the real you.",
+                "Always get on her nerves, piss her off, get her mad. That's real husband love."
+            ];
+            for (let tip of actions) {
+                result.innerHTML += `🟢 ${tip}<br>`;
+            }
+
+            result.innerHTML += "<h3>Dianne Wisdom Nuggets 😤</h3>";
+            const lines = [
+                "Do not attempt to protest on her doings. She’s always right.",
+                "Always obey her commands for she is the high queen.",
+                "Love her for she is, treat her as a queen, never the opposite.",
+                "She may look innocent but her humor is as darker than an African."
+            ];
+            lines.forEach((line, index) => {
+                result.innerHTML += `${index + 1}. ${line}<br>`;
+            });
+
+            const rizzTips = [
+                "Don’t rizz too hard—let her fall in love with your own unique weirdness.",
+                "The best rizz? Be her lover, bestfriend, guardian angel, everything. She's worth it.",
+                "Being vulnerable is hot. Let Dianne see the side you hide from everybody.",
+                "You don’t need lines. You just need to mean what you say around her."
+            ];
+
+            const teases = [
+                "I wonder what got you here when you've already saved lots of her photos ‘Dianne's Album’ 💀",
+                "Your brother already caught you being soft baby baby voice over her. WHY THE SOFTNESS?!?! 😭",
+                "You're in your delulu arc and Dianne is the entire plot and she's the high queen and you're a peasant. 😤",
+                "At this point, you're probably jealous of that teddy bear she gets to hug everytime she sleeps. 😘"
+            ];
+
+            if (extra === "yes") {
+                const tip = rizzTips[Math.floor(Math.random() * rizzTips.length)];
+                result.innerHTML += `<br><b>✍ TIPS TO RIZZ DIANNE (Serious) 😽:<br><br>${tip}</b><br>`;
+            } else if (extra === "tease") {
+                const roast = teases[Math.floor(Math.random() * teases.length)];
+                result.innerHTML += `<br><b>😈 Dianne Delulu Tease Mode:<br><br>${roast}</b><br>`;
+            } else {
+                result.innerHTML += "<br><b>🤭 No tips for now. Tuwang-tuwa ka nga maging under e. 🤗</b><br>";
+            }
+
+            result.innerHTML += "<br><br><b>PS: If my spells refuse to bear fruit by the end of this year, I shall do the shoebody bop bop ritual HARDER until she falls in love with me 😌</b><br>";
+        });
+    </script>
+    <footer style="margin-top: 50px; padding-top: 20px; border-top: 2px dashed #ff69b4; color: #000000; font-size: 14px; text-align: center;">
+        Made with fun, love, and deluluness for the happiness Dianne finds in my misery HAHAHAHAHAHAHAHAHA 💖<br><br>
+        Coded by Gyro — Certified PITA Developer 😎 <br><br>
+        Bachelor of Science in Information Technology - 2B 😎
+    </footer>
+</body>
+</html>

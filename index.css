@@ -1,0 +1,91 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #fff0f5;
+    color: #4b2e2e;
+    text-align: center;
+    padding: 40px 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #d63384;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #ffe6f0;
+    border: 2px dashed #ffb6c1;
+    padding: 25px 30px;
+    border-radius: 15px;
+    display: inline-block;
+    margin-top: 20px;
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
+}
+
+select, input[type="text"], input[type="submit"], input[type="radio"] {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+select, input[type="text"] {
+    padding: 7px 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: auto;
+    max-width: 200px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #d63384;
+}
+
+h2, h3 {
+    color: #cc3366;
+    margin-top: 30px;
+}
+
+.heart {
+    font-size: 24px;
+}
+
+b {
+    color: #e60073;
+    font-size: 1.1em;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    color: #8b3a62;
+}
+
+input[type="radio"] {
+    margin-right: 6px;
+}
+
+#result {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #fff5fa;
+    border-radius: 15px;
+    border: 2px solid #ffc0cb;
+    box-shadow: 0 4px 12px rgba(255, 182, 193, 0.3);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
